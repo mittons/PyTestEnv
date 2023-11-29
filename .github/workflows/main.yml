@@ -21,6 +21,6 @@ jobs:
 
     - name: Run Python script
       env:
-        #TEST_VAR: ${{ secrets.TEST_VAR }}  # Using a secret
-        TEST_VAR: 'Some Value'           # Or set it directly
+        TEST_VAR: ${{ secrets.TEST_VAR }}  # Using a secret
+        #TEST_VAR: 'Some Value'           # Or set it directly
       run: python script.py
