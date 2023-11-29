@@ -20,7 +20,7 @@ jobs:
         # If you have any dependencies, install them here
 
     - name: Run Python script
-      #env:
-      #  TEST_VAR: ${{ secrets.TEST_VAR }}  # Using a secret
-      #  # TEST_VAR: 'Some Value'           # Or set it directly
+      env:
+        #TEST_VAR: ${{ secrets.TEST_VAR }}  # Using a secret
+        TEST_VAR: 'Some Value'           # Or set it directly
       run: python script.py
