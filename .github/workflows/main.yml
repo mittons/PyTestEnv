@@ -1,0 +1,26 @@
+name: Python Script Workflow
+
+on: [push]
+
+jobs:
+  run-script:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.11'
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        # If you have any dependencies, install them here
+
+    - name: Run Python script
+      #env:
+      #  TEST_VAR: ${{ secrets.TEST_VAR }}  # Using a secret
+      #  # TEST_VAR: 'Some Value'           # Or set it directly
+      run: python script.py
